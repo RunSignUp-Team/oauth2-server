@@ -78,7 +78,7 @@ class BearerTokenValidator implements AuthorizationValidatorInterface
 
         $this->jwtConfiguration->setValidationConstraints(
             new ValidAt(new SystemClock(new DateTimeZone(\date_default_timezone_get()))),
-            new SignedWith(new Sha256(), LocalFileReference::file($this->publicKey->getKeyPath()))
+            new SignedWith(new Sha256(), $this->publicKey->getKey())
         );
     }
 
