@@ -16,7 +16,6 @@ use Lcobucci\JWT\Signer\Key\InMemory;
 use Lcobucci\JWT\Signer\Key\LocalFileReference;
 
 use LogicException;
-use RuntimeException;
 
 class CryptKey
 {
@@ -51,9 +50,7 @@ class CryptKey
             throw new \RuntimeException(
                 \sprintf('PCRE error [%d] encountered during key match attempt', \preg_last_error())
             );
-        }
-        else
-        {
+        } else {
             if (\strpos($keyPath, 'file://') !== 0) {
                 $keyPath = 'file://' . $keyPath;
             }
@@ -88,7 +85,7 @@ class CryptKey
      */
     public function getKey(): Key
     {
-      return $this->key;
+        return $this->key;
     }
 
     /**

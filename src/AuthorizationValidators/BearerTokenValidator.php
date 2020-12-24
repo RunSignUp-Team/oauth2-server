@@ -14,7 +14,6 @@ use Lcobucci\Clock\SystemClock;
 use Lcobucci\JWT\Configuration;
 use Lcobucci\JWT\Encoding\CannotDecodeContent;
 use Lcobucci\JWT\Signer\Key\InMemory;
-use Lcobucci\JWT\Signer\Key\LocalFileReference;
 use Lcobucci\JWT\Signer\Rsa\Sha256;
 use Lcobucci\JWT\Token\InvalidTokenStructure;
 use Lcobucci\JWT\Token\UnsupportedHeaderFound;
